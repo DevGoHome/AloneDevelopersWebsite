@@ -1,0 +1,67 @@
+{% extends 'AloneBundle::Base_layout.html.twig' %}
+
+{% block title %}
+GoHome - Dev Blog
+{% endblock %}
+
+{% block background %}
+    class="defaultBackground"
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <h1 class="text-center row col-md-6 col-lg-12 col-sm-4">
+            <u class="altext alheader">
+                "{{ blog.title }}"
+            </u>
+        </h1>
+    </div>
+
+    <div class="row">
+        <p class="text-center altext">
+            {{ blog.body | raw }}
+        </p>
+    </div>
+
+    <div class="row">
+        <p class="text-center altext">
+            <u>
+                {{ blog.sender }}
+            </u>
+        </p>ss
+    </div>
+
+    <div class="altext" style="margin-left: 32%">
+    <h2>Comments:</h2>
+        {% for comment in comments %}
+            {% if comment.enabled == 1 %}
+            <h3 class="altext alheader">{{ comment.sender }}:</h3>
+            <p></p>
+            <h4 class="altext">{{ comment.content }}</h4>
+            <p></p>
+            -----------------------------------------------------------------
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <div style="margin-left: 31.3%" class="row">
+            <div class="col-lg-7 col-md-6 col-sm-9 col-xs-8">
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+    <p class="row"></p>
+
+    <div class="row text-center">
+    {% if next %}
+    <a class="btn-alone btn" href="{{ path('GoHome_show_devBlog', {'id': next.id}) }}">Next Blog</a>
+    {% endif %}
+    <a class="btn-alone btn" href="{{ path('GoHome_devBlog') }}">Menu</a>
+    {% if prev %}
+    <a class="btn-alone btn" href="{{ path('GoHome_show_devBlog', {'id': prev.id}) }}">Previous Blog</a>
+    {% endif %}
+
+{% endblock %}

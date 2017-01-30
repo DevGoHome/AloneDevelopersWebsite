@@ -1,0 +1,21 @@
+{% extends 'AloneBundle::Base_layout.html.twig' %}
+
+{% block title %}
+Media hinzufügen
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <h1 class="text-center">
+            <u class="altext alheader">
+                Media hinzufügen
+            </u>
+        </h1>
+    </div>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'AloneBundle::Base_layout.html.twig' %}
+
+{% block title %}
+    <title>GoHome - Neuer Blog</title>
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <h2 class="text-center">
+            <u class="altext alheader">
+                Neuen Blog Eintrag erstellen
+            </u>
+        </h2>
+    </div>
+
+    <p></p>
+
+<div class="col-lg-6 text-center col-lg-offset-3">
+{{ form_start(form) }}
+{{ form_widget(form) }}
+{{ form_end(form) }}
+</div>
+
+{{ tinymce_init() }}
+
+{% endblock %}

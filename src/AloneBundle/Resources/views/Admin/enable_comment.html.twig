@@ -1,0 +1,26 @@
+{% extends 'AloneBundle::Base_layout.html.twig' %}
+
+{% block title %}
+    Kommentar freigeben
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <h1 class="text-center">
+            <u class="altext alheader">
+                Kommentar freigeben
+            </u>
+        </h1>
+    </div>
+
+    <div class="text-center">
+        <h1 class="altext">Neue Kommentare:</h1>
+    <div>
+
+        {% for comment in comments %}
+            <a href="{{ path('seeComment', {'comment': comment.id}) }}">{{ comment.sender }} in Blog: "{{ comment.blog.title }}"</a>
+            <p></p>
+        {% endfor %}
+
+{% endblock %}

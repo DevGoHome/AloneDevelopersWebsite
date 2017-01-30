@@ -1,0 +1,32 @@
+alone:
+    resource: "@AloneBundle/Controller/Home_Controller.php"
+    type:     annotation
+    prefix:   /
+
+about_us:
+    resource: "@AloneBundle/Controller/Aboutus_Controller.php"
+    type:     annotation
+    prefix:   /
+
+contact:
+    resource: "@AloneBundle/Controller/Contact_Controller.php"
+    type:     annotation
+    prefix:   /
+
+gohome:
+    resource: "@AloneBundle/Controller/GoHome_Controller.php"
+    type:     annotation
+    prefix:   /
+
+admin:
+    resource: "@AloneBundle/Controller/Admin/AdminController.php"
+    type:     annotation
+    prefix:   /
+
+friends:
+    resource: "@AloneBundle/Controller/Friends_Controller.php"
+    type:     annotation
+    prefix:    /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

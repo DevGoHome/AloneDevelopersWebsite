@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="{{ asset('css/OwnStyle.css') }}">
+        <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vidaloka">
+        <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    {% endblock %}
+
+        <title>{% block title %}{% endblock %}</title>
+
+</head>
+
+<body style="margin-top: 70px;" {% block background %}class="backgroundImage img-responsive"{% endblock %}>
+
+<div>
+<div id="Toolbar">
+    {% block toolbar %}
+        <div class="container">
+            <div class="col-sm-2 col-xs-4">
+                <a href="{{ path('aboutUs') }}" class="btn toolbar-links">About us</a>
+            </div>
+
+            <div class="col-sm-2 col-xs-4">
+                <a href="{{ path('GoHome_start') }}" class="btn toolbar-links">GoHome</a>
+            </div>
+
+            <div class="col-sm-2 col-xs-4">
+                <a href="{{ path('index') }}" class="btn toolbar-links">Start</a>
+            </div>
+
+            <div class="col-sm-2 col-xs-4">
+                <a href="{{ path('contact') }}" class="btn toolbar-links">Contact</a>
+            </div>
+
+            <div class="col-sm-2 col-xs-4">
+                <a href="{{ path('friends') }}" class="btn toolbar-links" >Friends</a>
+            </div>
+</div>
+    {% endblock %}
+</div>
+
+<div id="content" class="row">
+    {% block content %}
+
+    {% endblock %}
+    </div>
+</div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

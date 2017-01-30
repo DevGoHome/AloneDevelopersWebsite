@@ -1,0 +1,29 @@
+{% extends 'AloneBundle::Base_layout.html.twig' %}
+
+{% block title %}
+GoHome - Dev Blog
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <h1 class="text-center row col-md-6 col-lg-12 col-sm-4">
+            <u class="altext alheader">
+                Dev Blog
+            </u>
+        </h1>
+    </div>
+
+<div class="col-lg-offset-3">
+
+    {% set i = blogs|length - 1 %}
+
+    <ul>
+    {% for blog in blogs %}
+        <a class="allink albig" href="{{ path('GoHome_show_devBlog', {'id': blogs[i].id}) }}">{{ blogs[i].title | raw }}</a>
+        <p></p>
+        {% set i = i - 1 %}
+    {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

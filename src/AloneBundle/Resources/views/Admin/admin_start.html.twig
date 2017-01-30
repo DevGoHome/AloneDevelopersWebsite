@@ -1,0 +1,24 @@
+{% extends 'AloneBundle::Base_layout.html.twig' %}
+
+{% block title %}
+GoHome
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <h1 class="text-center">
+            <u class="altext alheader">
+                Admin Bereich
+            </u>
+        </h1>
+    </div>
+
+    <div class="text-center">
+    <a href="{{ path('addMedia') }}" class="btn btn-blue">Media hinzufügen</a>
+    <a href="{{ path('addDevBlog') }}" class="btn btn-blue">Blog hinzufügen</a>
+    <a href="{{ path('addUser') }}" class="btn btn-blue">Benutzer hinzufügen</a>
+    <a href="{{ path('enableComment') }}" class="btn btn-blue">Kommentar freigeben</a>
+    <div>
+
+{% endblock %}

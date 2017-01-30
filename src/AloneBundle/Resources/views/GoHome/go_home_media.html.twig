@@ -1,0 +1,31 @@
+{% extends 'AloneBundle::Base_layout.html.twig' %}
+
+{% block title %}
+GoHome - Media
+{% endblock %}
+
+{% block content %}
+
+        <a style="margin-top: 25px" class="btn btn-alone" href="{{ path('Information') }}">Information about pictures</a>
+
+        <div class="row">
+            <h1 class="text-center">
+                <u class="altext alheader">
+                    Media
+                </u>
+            </h1>
+        </div>
+
+        {% set i = media|length - 1 %}
+
+        {% for m in media %}
+            <a
+                href="{{ asset( 'uploads/media/' ~ media[i].file ) }}"
+                target="_blank" >
+                <img hspace="20px" vspace="20px"
+                class="img-rounded" width="300" height="300" src="{{ asset( 'uploads/media/' ~ media[i].file ) }}" alt="{{ media[i].name }}">
+            </a>
+            {% set i = i - 1 %}
+        {% endfor %}
+
+{% endblock %}

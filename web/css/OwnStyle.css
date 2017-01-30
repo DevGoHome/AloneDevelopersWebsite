@@ -1,0 +1,182 @@
+
+
+/*#050c03 #3e0709 #9ba043 #7aa4a7 #0d1736*/
+
+.btn {
+    padding: 3px 24px;
+    border: 0 none;
+    font-weight: 400;
+    letter-spacing: 0px;
+    font-family: 'Vidaloka';
+}
+
+.altext{
+    font-family: 'Vidaloka';
+    font-size: 110%;
+    color: #242424;
+}
+
+.alheader{
+    font-family: 'Cinzel';
+    font-size: 370%;
+    text-shadow: 0px 0px 12px rgba(150, 150, 150, 1);
+    color: #2a2a2a;
+}
+
+.allink{
+    font-family: 'Vidaloka';
+    font-size: 110%;
+    color: #0d1736;
+}
+
+.albig{
+    font-family: 'Vidaloka';
+    font-size: 200%;
+}
+
+.btn-gohome {
+    background: rgba(0, 0, 0, 0.95);
+    color: #7e7e7e;
+    border-radius: 13%;
+}
+
+.btn-gohome {
+    background: rgba(9, 9, 9, 0.95);
+    color: #959595;
+}
+
+.btn-gohome:hover {
+    background: #000000;
+    color: #c5c5c5;
+    transition: 0.2s;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #33a6cc;
+}
+
+.btn-red {
+    background: #450002;
+    color: #7e7e7e;
+    border-radius: 13%;
+}
+
+.btn-blue {
+    background: #002845;
+    color: #7e7e7e;
+    border-radius: 13%;
+}
+
+.btn-green {
+    background: #002a0f;
+    color: #7e7e7e;
+    border-radius: 13%;
+}
+
+.btn-red:hover {
+    background: #1d0002;
+    color: #c5c5c5;
+    transition: 0.2s;
+}
+
+.btn-blue:hover {
+    background: #001022;
+    color: #c5c5c5;
+    transition: 0.2s;
+}
+
+.btn-green:hover {
+    background: #001e0d;
+    color: #c5c5c5;
+    transition: 0.2s;
+}
+
+.btn-innerMenu {
+    background-color: #0c0f1e;
+    border-radius: 5px;
+    border: 2px solid #040404;
+    box-shadow: #000000 0px 0px 14px;
+    color: #405657;
+    font-size: 42px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    text-shadow: #000000 5px 5px 10px;
+    transition: all 0.4s ease;
+}
+.btn-innerMenu:hover {
+    background-color: #050b1c;
+    border-radius: 5px;
+    border: 2px solid #050c03;
+    box-shadow: #000000 0px 0px 14px;
+    color: #3e0709;
+    font-size: 42px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    text-shadow: #000000 5px 5px 10px;
+    transition: all 0.4s ease;
+}
+.btn-GoHome:active {
+    position:relative;
+    top:1px;
+}
+
+#Toolbar {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+    background: #0d1736;
+    border-bottom: 1px solid #333;
+    text-align: center;
+    z-index: 9999;
+}
+
+.toolbar-links {
+    font-family: 'Vidaloka';
+    font-size: 170%;
+    color: #7aa4a7;
+}
+
+.btn-alone {
+    background-color: #0d1736;
+    border-radius: 5px;
+    border: 2px solid #050c03;
+    box-shadow: #000000 0px 0px 14px;
+    color: #7aa4a7;
+    font-size: 15px;
+    padding: 10px;
+    text-decoration: none;
+    text-shadow: #000000 5px 5px 10px;
+    transition: all 0.4s ease;
+}
+
+.backgroundImage {
+    background-image: url("/../images/GoHomeTeaser.png");
+    /*background-size: 100% auto;*/
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+
+}
+
+.defaultBackground {
+    background: rgba(5, 12, 3, 0.67);
+}
+
+.col-center {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+}

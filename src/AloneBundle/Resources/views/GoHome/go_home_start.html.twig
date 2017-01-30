@@ -1,0 +1,25 @@
+{% extends 'AloneBundle::Base_layout.html.twig' %}
+
+{% block title %}
+GoHome
+{% endblock %}
+
+{% block content %}
+
+    <div class="row text-center">
+        <h1 class="col-lg-12">
+            <u class="altext alheader">
+                Go Home
+            </u>
+        </h1>
+    </div>
+
+        <p></p>
+
+        <div class="text-center row">
+            <a href="{{ path('GoHome_devBlog') }}" class="btn btn-innerMenu">Dev Blog</a>
+            <a href="{{ path('GoHome_About') }}" class="btn btn-innerMenu">About</a>
+            <a href="{{ path('GoHome_Media') }}" class="btn btn-innerMenu">Media</a>
+        <div>
+        {#<img src="{{ asset('images/GoHomeTeaser.png') }}">#}
+{% endblock %}

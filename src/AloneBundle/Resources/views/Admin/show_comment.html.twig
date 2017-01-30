@@ -1,0 +1,36 @@
+{% extends 'AloneBundle::Base_layout.html.twig' %}
+
+{% block title %}
+    Kommentar freigeben
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <h1 class="text-center">
+            <u class="altext alheader">
+                Kommentar freigeben
+            </u>
+        </h1>
+    </div>
+
+<div class="text-center">
+<h2>Blog:</h2>
+{{ comment.blog.title }}
+<p></p>
+
+<h2>Absender:</h2>
+{{ comment.sender }}
+<p></p>
+
+<h2>Inhalt:</h2>
+{{ comment.content }}
+<p></p>
+
+<a class="btn btn-green" href="{{ path('commentEnabled', {'comment': comment.id, 'enabled': 1}) }}">Diesen Kommentar Freigeben!</a>
+<a class="btn btn-red" href="{{ path('commentEnabled', {'comment': comment.id, 'enabled': 0}) }}">Diesen Kommentar löschen!</a>
+
+
+</div>
+
+{% endblock %}
