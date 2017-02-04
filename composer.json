@@ -40,7 +40,7 @@
         "stfalcon/tinymce-bundle": "1.0",
         "friendsofsymfony/user-bundle": "~2.0@dev",
         "doctrine/common": "2.5",
-        "symfony/twig-bundle": "2.8.16"
+        "twig/twig": "1.31.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",
