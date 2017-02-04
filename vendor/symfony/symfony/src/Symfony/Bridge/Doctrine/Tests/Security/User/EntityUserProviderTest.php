@@ -81,6 +81,7 @@ class EntityUserProviderTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @group legacy
+     * @expectedDeprecation Implementing Symfony\Component\Security\Core\User\UserProviderInterface in a Doctrine repository when using the entity provider is deprecated since version 2.8 and will not be supported in 3.0. Make the repository implement Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface instead.
      */
     public function testLoadUserByUsernameWithUserProviderRepositoryAndWithoutProperty()
     {
@@ -179,12 +180,12 @@ class EntityUserProviderTest extends \PHPUnit_Framework_TestCase
 
     public function testLoadUserByUserNameShouldLoadUserWhenProperInterfaceProvided()
     {
-        $repository = $this->getMock('\Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface');
+        $repository = $this->getMockBuilder('\Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface')->getMock();
         $repository->expects($this->once())
             ->method('loadUserByUsername')
             ->with('name')
             ->willReturn(
-                $this->getMock('\Symfony\Component\Security\Core\User\UserInterface')
+                $this->getMockBuilder('\Symfony\Component\Security\Core\User\UserInterface')->getMock()
             );
 
         $provider = new EntityUserProvider(
@@ -200,7 +201,7 @@ class EntityUserProviderTest extends \PHPUnit_Framework_TestCase
      */
     public function testLoadUserByUserNameShouldDeclineInvalidInterface()
     {
-        $repository = $this->getMock('\Symfony\Component\Security\Core\User\AdvancedUserInterface');
+        $repository = $this->getMockBuilder('\Symfony\Component\Security\Core\User\AdvancedUserInterface')->getMock();
 
         $provider = new EntityUserProvider(
             $this->getManager($this->getObjectManager($repository)),
@@ -212,7 +213,7 @@ class EntityUserProviderTest extends \PHPUnit_Framework_TestCase
 
     private function getManager($em, $name = null)
     {
-        $manager = $this->getMock('Doctrine\Common\Persistence\ManagerRegistry');
+        $manager = $this->getMockBuilder('Doctrine\Common\Persistence\ManagerRegistry')->getMock();
         $manager->expects($this->any())
             ->method('getManager')
             ->with($this->equalTo($name))
