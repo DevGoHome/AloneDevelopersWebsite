@@ -38,7 +38,8 @@
         "symfony/assetic-bundle": "^2.8",
         "twbs/bootstrap": "^3.3",
         "stfalcon/tinymce-bundle": "1.0",
-        "friendsofsymfony/user-bundle": "~2.0@dev"
+        "friendsofsymfony/user-bundle": "~2.0@dev",
+        "doctrine/common": "2.5"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",
