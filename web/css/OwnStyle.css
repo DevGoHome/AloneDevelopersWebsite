@@ -26,7 +26,12 @@
 .allink{
     font-family: 'Vidaloka';
     font-size: 110%;
-    color: #0d1736;
+    color: #1e2f48;
+}
+
+.allink:hover{
+    font-family: 'Vidaloka';
+    color: #2e476d;
 }
 
 .albig{
