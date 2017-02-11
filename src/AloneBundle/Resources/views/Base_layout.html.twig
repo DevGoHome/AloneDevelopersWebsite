@@ -22,23 +22,15 @@
 <div id="Toolbar">
     {% block toolbar %}
         <div class="container">
-            <div class="col-sm-2 col-xs-4">
+            <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
                 <a href="{{ path('aboutUs') }}" class="btn toolbar-links">About us</a>
-            </div>
 
-            <div class="col-sm-2 col-xs-4">
                 <a href="{{ path('GoHome_start') }}" class="btn toolbar-links">GoHome</a>
-            </div>
 
-            <div class="col-sm-2 col-xs-4">
                 <a href="{{ path('index') }}" class="btn toolbar-links">Start</a>
-            </div>
 
-            <div class="col-sm-2 col-xs-4">
                 <a href="{{ path('contact') }}" class="btn toolbar-links">Contact</a>
-            </div>
 
-            <div class="col-sm-2 col-xs-4">
                 <a href="{{ path('friends') }}" class="btn toolbar-links" >Friends</a>
             </div>
 </div>
@@ -52,12 +44,18 @@
     </div>
 </div>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% block javascript %}
+
+{% endblock %}
 
 <script
         src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+
+</script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
 
