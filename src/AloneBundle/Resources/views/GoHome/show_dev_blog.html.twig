@@ -10,21 +10,21 @@ GoHome - Dev Blog
 
 {% block content %}
 
-    <div class="row">
-        <h1 class="text-center row">
+    <div class="row col-lg-12">
+        <h1 class="text-center">
             <u class="altext alheader">
                 "{{ blog.title }}"
             </u>
         </h1>
     </div>
 
-    <div class="row">
+    <div class="row col-lg-12">
         <p class="text-center altext">
             {{ blog.body | raw }}
         </p>
     </div>
 
-    <div class="row">
+    <div class="row col-lg-12">
         <p class="text-center altext">
             <u>
                 {{ blog.sender }}
