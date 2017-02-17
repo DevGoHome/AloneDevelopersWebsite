@@ -164,18 +164,11 @@
 }
 
 .backgroundImage {
-    background-image: url("/../images/GoHomeTeaser.png");
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
+    background: url("/../images/GoHomeTeaser.png") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-
 }
 
 .defaultBackground {
