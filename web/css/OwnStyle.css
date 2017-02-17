@@ -165,14 +165,15 @@
 
 .backgroundImage {
     background-image: url("/../images/GoHomeTeaser.png");
-    /*background-size: 100% auto;*/
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
+    /*!*background-size: 100% auto;*!*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    top: 0;
+    left: 0;
+
+    min-width: 100%;
+    min-height: 100%;
 
 }
 
