@@ -100,13 +100,13 @@
     background-color: #0c0f1e;
     border-radius: 5px;
     border: 2px solid #040404;
-    box-shadow: #000000 0px 0px 2vw;
+    box-shadow: #000000 0px 0px 2vmax;
     color: #405657;
-    font-size: 2.1vw;
-    padding-left: 1.6vw;
-    padding-right: 1.6vw;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    font-size: 2.1vmax;
+    padding-left: 1.6vmax;
+    padding-right: 1.6vmax;
+    padding-top: 1vmax;
+    padding-bottom: 1vmax;
     text-decoration: none;
     text-shadow: #000000 5px 5px 10px;
     transition: all 0.4s ease;
@@ -165,9 +165,6 @@
 
 .backgroundImage {
     background: url("/../images/GoHomeTeaser.png") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: 100vw 100vh;
 }
 
