@@ -12,14 +12,14 @@
 
 .altext{
     font-family: 'Vidaloka';
-    font-size: 2vw;
+    font-size: 2vmax;
     color: #242424;
 }
 
 .alheader{
     font-family: 'Cinzel';
-    font-size: 7vw;
-    text-shadow: 0px 0px 0.5vw rgba(150, 150, 150, 1);
+    font-size: 7vmax;
+    text-shadow: 0px 0px 0.5vmax rgba(150, 150, 150, 1);
     color: #2a2a2a;
 }
 
@@ -115,13 +115,13 @@
     background-color: #050b1c;
     border-radius: 5px;
     border: 2px solid #050c03;
-    box-shadow: #000000 0px 0px 2vw;
+    box-shadow: #000000 0px 0px 2vmax;
     color: #3e0709;
-    font-size: 2.1vw;
-    padding-left: 1.6vw;
-    padding-right: 1.6vw;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    font-size: 2.1vmax;
+    padding-left: 1.6vmax;
+    padding-right: 1.6vmax;
+    padding-top: 1vmax;
+    padding-bottom: 1vmax;
     text-decoration: none;
     text-shadow: #000000 5px 5px 10px;
     transition: all 0.4s ease;
@@ -165,7 +165,7 @@
 
 .backgroundImage {
     background: url("/../images/GoHomeTeaser.png") no-repeat center center fixed;
-    background-size: 100vw 100vh;
+    background-size: 100vmax;
 }
 
 .defaultBackground {
