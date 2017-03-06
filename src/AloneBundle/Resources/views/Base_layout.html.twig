@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,13 +15,12 @@
 
 </head>
 
-<body style="margin-top: 100px" {% block background %}class="backgroundImage" {% endblock %}>
+<body style="margin-top: 100px" {% block background %}class="backgroundImage"{% endblock %}>
 
-<div>
 <div id="Toolbar">
     {% block toolbar %}
         <div class="container">
-            <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+            <div>
                 <a href="{{ path('aboutUs') }}" class="btn toolbar-links">About us</a>
 
                 <a href="{{ path('GoHome_start') }}" class="btn toolbar-links">GoHome</a>
@@ -37,17 +35,14 @@
     {% endblock %}
 </div>
 
-<div id="content" class="row">
+<div style="width: 100%" id="content" class="row">
     {% block content %}
 
     {% endblock %}
     </div>
-</div>
-
 {% block javascript %}
 
 {% endblock %}
-
 <script
         src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
