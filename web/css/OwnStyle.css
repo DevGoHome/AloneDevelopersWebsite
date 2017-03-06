@@ -133,11 +133,11 @@
 
 #Toolbar {
     position: fixed;
-    width: 100%;
-    height: 100px;
+    width: 100vw;
+    height: 12vh;
     top: 0;
     left: 0;
-    padding: 5px 10px;
+    padding: 5px;
     background: #0d1736;
     border-bottom: 1px solid #333;
     text-align: center;
