@@ -16,7 +16,7 @@
 
 </head>
 
-<body style="margin-top: 100px;" {% block background %}class="backgroundImage"{% endblock %}>
+<body style="margin-top: 100px" {% block background %}{% endblock %}>
 
 <div>
 <div id="Toolbar">
@@ -37,7 +37,7 @@
     {% endblock %}
 </div>
 
-<div id="content" class="row">
+<div id="content" class="row backgroundImage" style="height: 100vh">
     {% block content %}
 
     {% endblock %}
