@@ -25,7 +25,7 @@
 
 .allink{
     font-family: 'Vidaloka';
-    font-size: 1vmax;
+    font-size: 1.2vmax;
     color: #1e2f48;
 }
 
@@ -154,10 +154,10 @@
     background-color: #0d1736;
     border-radius: 5px;
     border: 2px solid #050c03;
-    box-shadow: #000000 0px 0px 14px;
+    box-shadow: #000000 0 0 0.6vmax;
     color: #7aa4a7;
-    font-size: 15px;
-    padding: 10px;
+    font-size: 1vmax;
+    padding: 0.8vmax;
     text-decoration: none;
     text-shadow: #000000 5px 5px 10px;
     transition: all 0.4s ease;
