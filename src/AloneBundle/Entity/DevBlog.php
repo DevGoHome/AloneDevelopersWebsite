@@ -47,11 +47,6 @@ class DevBlog
      */
     private $comments;
 
-    /**
-     * @ORM\Column(name="created", type="datetime", nullable=false)
-     */
-    private $created;
-
 
     public function __construct()
     {
@@ -155,22 +150,6 @@ class DevBlog
     public function setComments($comments)
     {
         $this->comments = $comments;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCreated()
-    {
-        return $this->created;
-    }
-
-    /**
-     * @param mixed $created
-     */
-    public function setCreated($created)
-    {
-        $this->created = $created;
     }
 }
 
