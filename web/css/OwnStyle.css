@@ -112,7 +112,7 @@
     border-radius: 5px;
     border: 2px solid #040404;
     box-shadow: #000000 0px 0px 2vmax;
-    color: #405657;
+    color: #779a9b;
     font-size: 2.1vmax;
     padding-left: 1.6vmax;
     padding-right: 1.6vmax;
@@ -120,14 +120,13 @@
     padding-bottom: 1vmax;
     text-decoration: none;
     text-shadow: #000000 5px 5px 10px;
-    transition: all 0.4s ease;
 }
 .btn-innerMenu:hover {
     background-color: #050b1c;
     border-radius: 5px;
-    border: 2px solid #050c03;
+    border: 2px solid #000000;
     box-shadow: #000000 0px 0px 2vmax;
-    color: #3e0709;
+    color: #760c11;
     font-size: 2.1vmax;
     padding-left: 1.6vmax;
     padding-right: 1.6vmax;
@@ -135,7 +134,7 @@
     padding-bottom: 1vmax;
     text-decoration: none;
     text-shadow: #000000 5px 5px 10px;
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
 }
 .btn-GoHome:active {
     position:relative;
@@ -149,15 +148,15 @@
     top: 0;
     left: 0;
     padding: 5px;
-    background: #0a132d;
-    border-bottom: 1px solid #0e1434;
+    /*background: #0a132d;*/
+    background: linear-gradient(#0a1020, #0e1434); /* Standard syntax */
     text-align: center;
     z-index: 9999;
 }
 
 .toolbar-links {
     font-family: 'Indie Flower';
-    font-size: 4vh;
+    font-size: 4.5vh;
     color: #7aa4a7;
 }
 
