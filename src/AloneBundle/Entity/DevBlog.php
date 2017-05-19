@@ -47,10 +47,15 @@ class DevBlog
      */
     private $comments;
 
+    /**
+     * @var string
+     * @ORM\Column(name="created", type="string")
+     */
+    private $created;
 
     public function __construct()
     {
-//        $this->created = date('dd.mm.yyyy HH:ii');
+        $this->created = date('d.m.Y H:i');
     }
 
 
@@ -150,6 +155,22 @@ class DevBlog
     public function setComments($comments)
     {
         $this->comments = $comments;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * @param string $created
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
     }
 }
 
