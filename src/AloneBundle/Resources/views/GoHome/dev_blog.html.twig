@@ -6,10 +6,8 @@ GoHome - Dev Blog
 
 {% block content %}
     <div class="row">
-        <h1 class="text-center row col-md-6 col-lg-12 col-sm-4">
-            <u class="altext alheader">
+        <h1 class="text-center alheader">
                 Dev Blog
-            </u>
         </h1>
     </div>
 
@@ -19,7 +17,7 @@ GoHome - Dev Blog
 
     <ul>
     {% for blog in blogs %}
-        <a id="blog_{{ i }}" style="display: none; font-size: 250%" class="allink" href="{{ path('GoHome_show_devBlog', {'id': blogs[i].id}) }}">{{ blogs[i].title | raw }}</a>
+        <a id="blog_{{ i }}" style="display: none; font-size: 250%" class="bloglink" href="{{ path('GoHome_show_devBlog', {'id': blogs[i].id}) }}">{{ blogs[i].title | raw }}</a>
         <p></p>
         {% set i = i - 1 %}
     {% endfor %}
@@ -70,8 +68,6 @@ GoHome - Dev Blog
             }
         }
 
-        showButtons();
-
         function previous() {
             start = start + 5;
             end = end + 5;
@@ -94,7 +90,7 @@ GoHome - Dev Blog
             for (var i = entrys.length - start; i >= entrys.length - end; i--) {
                 if (entrys[i] != null) {
                     entrys[i].style.display = "inline";
-                    entrys[i].style.color = "#336eff";
+                    entrys[i].style.color = "#b7b7b7";
                 }
             }
             showButtons();

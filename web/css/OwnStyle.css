@@ -17,9 +17,9 @@
 }
 
 .alheader{
-    font-family: 'Handlee';
-    font-size: 7vmax;
-    text-shadow: 0px 0px 0.5vmax rgba(150, 150, 150, 1);
+    font-family: 'Bilbo';
+    font-size: 12vmax;
+    text-shadow: 0px 0px 0.2vmax rgba(150, 150, 150, 1);
     color: #2a2a2a;
 }
 
@@ -34,8 +34,19 @@
     color: #2e476d;
 }
 
+.bloglink{
+    font-family: 'Indie Flower';
+    font-size: 1.2vmax;
+    color: #b7b7b7;
+}
+
+.bloglink:hover{
+    font-family: 'Indie Flower';
+    color: #cacaca;
+}
+
 .albig{
-    font-family: 'Vidaloka';
+    font-family: 'Indie Flower';
     font-size: 1.5vmax;
 }
 
