@@ -10,26 +10,27 @@ GoHome - Dev Blog
 
 {% block content %}
 
-    <div class="row col-lg-12">
-        <h1 class="text-center">
-            <u class="altext alheader">
-                "{{ blog.title }}"
-            </u>
+        <h1 class="text-center altext" style="font-size: 4.5vmax">
+            <b>
+                {{ blog.title }}
+            </b>
         </h1>
-    </div>
 
-    <div class="row col-lg-12">
-        <p class="text-center altext">
+    <div class="row altext" style="padding-left: 11vw; padding-right: 11vw; font-size: 180%">
             {{ blog.body | raw }}
-        </p>
     </div>
 
-    <div class="row col-lg-12">
+    <div class="row">
         <p class="text-center altext">
             <u>
                 {{ blog.sender }}
             </u>
         </p>
+    </div>
+
+    <div class="row text-center altext">
+        <h3>Created at:</h3>
+        {{ blog.created }}
     </div>
 
     <div class="altext" style="margin-left: 32%">

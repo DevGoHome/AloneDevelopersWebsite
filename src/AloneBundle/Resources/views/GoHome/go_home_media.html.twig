@@ -6,13 +6,11 @@ GoHome - Media
 
 {% block content %}
 
-        <a style="margin-top: 25px" class="btn btn-alone" href="{{ path('Information') }}">Information about pictures</a>
+        <a style="margin-top: 0.8vh" class="btn btn-alone" href="{{ path('Information') }}">Click here!</a>
 
         <div class="row">
-            <h1 class="text-center">
-                <u class="altext alheader">
+            <h1 class="text-center alheader">
                     Media
-                </u>
             </h1>
         </div>
 
@@ -27,5 +25,15 @@ GoHome - Media
             </a>
             {% set i = i - 1 %}
         {% endfor %}
+
+{% endblock %}
+
+{% block javascript %}
+
+    <script>
+
+
+
+    </script>
 
 {% endblock %}

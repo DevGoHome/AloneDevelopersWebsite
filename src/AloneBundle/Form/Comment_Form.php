@@ -19,7 +19,7 @@ class Comment_Form extends AbstractType
             'attr' => array(
                 'placeholder' => 'Thanks for wanting to share a comment!
                  Before we can publish it we must check it for spam or other nasty things.
-                  Please have a little patience. Oh and the maximum character length is 1000.'
+                  Please have a little patience. The maximum character length is 1000.'
             )
         ))->add('send', SubmitType::class, array(
             'label' => 'Send',

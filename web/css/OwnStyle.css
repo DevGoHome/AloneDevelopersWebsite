@@ -7,35 +7,39 @@
     border: 0 none;
     font-weight: 400;
     letter-spacing: 0px;
-    font-family: 'Vidaloka';
+    font-family: 'Sunshiney';
 }
 
 .altext{
-    font-family: 'Vidaloka';
+    font-family: 'Indie Flower';
     font-size: 2vmax;
-    color: #242424;
-}
-
-.alheader{
-    font-family: 'Handlee';
-    font-size: 7vmax;
-    text-shadow: 0px 0px 0.5vmax rgba(150, 150, 150, 1);
-    color: #2a2a2a;
+    color: #2e2e2e;
 }
 
 .allink{
-    font-family: 'Vidaloka';
+    font-family: 'Indie Flower';
     font-size: 1.2vmax;
     color: #1e2f48;
 }
 
 .allink:hover{
-    font-family: 'Vidaloka';
+    font-family: 'Indie Flower';
     color: #2e476d;
 }
 
+.bloglink{
+    font-family: 'Indie Flower';
+    font-size: 1.2vmax;
+    color: #b7b7b7;
+}
+
+.bloglink:hover{
+    font-family: 'Indie Flower';
+    color: #cacaca;
+}
+
 .albig{
-    font-family: 'Vidaloka';
+    font-family: 'Indie Flower';
     font-size: 1.5vmax;
 }
 
@@ -97,11 +101,11 @@
 }
 
 .btn-innerMenu {
-    background-color: #0c0f1e;
+    background-color: #090d1a;
     border-radius: 5px;
     border: 2px solid #040404;
     box-shadow: #000000 0px 0px 2vmax;
-    color: #405657;
+    color: #779a9b;
     font-size: 2.1vmax;
     padding-left: 1.6vmax;
     padding-right: 1.6vmax;
@@ -109,14 +113,13 @@
     padding-bottom: 1vmax;
     text-decoration: none;
     text-shadow: #000000 5px 5px 10px;
-    transition: all 0.4s ease;
 }
 .btn-innerMenu:hover {
     background-color: #050b1c;
     border-radius: 5px;
-    border: 2px solid #050c03;
+    border: 2px solid #000000;
     box-shadow: #000000 0px 0px 2vmax;
-    color: #3e0709;
+    color: #760c11;
     font-size: 2.1vmax;
     padding-left: 1.6vmax;
     padding-right: 1.6vmax;
@@ -124,7 +127,7 @@
     padding-bottom: 1vmax;
     text-decoration: none;
     text-shadow: #000000 5px 5px 10px;
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
 }
 .btn-GoHome:active {
     position:relative;
@@ -138,20 +141,19 @@
     top: 0;
     left: 0;
     padding: 5px;
-    background: #0d1736;
-    border-bottom: 1px solid #333;
+    background: linear-gradient(#0a1020, #0e1434);
     text-align: center;
     z-index: 9999;
 }
 
 .toolbar-links {
-    font-family: 'Vidaloka';
-    font-size: 2.5vh;
+    font-family: 'Indie Flower';
+    font-size: 5vh;
     color: #7aa4a7;
 }
 
 .btn-alone {
-    background-color: #0d1736;
+    background-color: #0a132d;
     border-radius: 5px;
     border: 2px solid #050c03;
     box-shadow: #000000 0 0 0.6vmax;
@@ -170,11 +172,20 @@
 }
 
 .defaultBackground {
-    background: rgba(5, 12, 3, 0.67);
+    background: rgba(29, 44, 34, 0.67);
 }
 
 .col-center {
     float: none;
     margin-right: auto;
     margin-left: auto;
+}
+
+.alheader{
+    font-family: 'Bilbo';
+    font-size: 12vmax;
+    font-weight:600;
+    text-shadow: 0px 0px 0.2vmax rgb(0, 0, 0);
+    color: rgb(27, 38, 54);
+    text-align: center;
 }
