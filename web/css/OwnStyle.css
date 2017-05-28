@@ -172,7 +172,7 @@
 }
 
 .defaultBackground {
-    background: rgba(5, 12, 3, 0.67);
+    background: rgba(29, 44, 34, 0.67);
 }
 
 .col-center {
@@ -184,6 +184,7 @@
 .alheader{
     font-family: 'Bilbo';
     font-size: 12vmax;
+    font-weight:600;
     text-shadow: 0px 0px 0.2vmax rgb(0, 0, 0);
     color: rgb(27, 38, 54);
     text-align: center;
