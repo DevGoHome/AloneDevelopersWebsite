@@ -13,7 +13,7 @@ class GoHome_Controller extends Controller
 {
 
     /**
-     * @Route("GoHome", name="GoHome_start")
+     * @Route("GoHome/start", name="GoHome_start")
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function startAction()
