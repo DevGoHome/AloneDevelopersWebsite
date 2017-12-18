@@ -141,7 +141,7 @@
     top: 0;
     left: 0;
     padding: 5px;
-    background: linear-gradient(#000a26, #0a1839);
+    background: linear-gradient(rgba(0, 10, 38, 1), rgba(10, 24, 57, 1));
     text-align: center;
     z-index: 9999;
 }
@@ -153,7 +153,7 @@
     top: 15%;
     left: 0;
     padding: 5px;
-    background: linear-gradient(#000a26, #0a1839);
+    background: linear-gradient(#0a1839, #000a26);
     text-align: center;
     z-index: 9999;
 }
@@ -178,7 +178,7 @@
 }
 
 .backgroundImage {
-    background: url("/../images/GoHomeTeaser.png") no-repeat center center fixed;
+    background: url("/../images/GoHomeTeaser.png") no-repeat center fixed;
     background-size: 100vw 100vh;
     background-position: 0 12vh;
 }
@@ -195,13 +195,12 @@
 
 .alheader{
     font-family: 'Lora';
-    font-size: 8vmax;
+    font-size: 1000%;
     font-weight:600;
     text-shadow: 0px 0px 0.2vmax rgb(0, 0, 0);
     color: rgb(27, 38, 54);
-    text-align: left;
-    padding: 3%;
-    float: left;
+    padding-left: 13%;
+    padding-top: 8%;
 }
 
 .alheader-Right{
@@ -213,4 +212,31 @@
     text-align: right;
     padding: 3%;
     float: right;
+}
+
+/*Medium devices*/
+@media only screen and (max-width: 960px){
+    .alheader {
+        font-size: 700%;
+        padding-top: 14%;
+        padding-left: 15%;
+    }
+}
+
+/*Medium devices*/
+@media only screen and (max-width: 600px){
+    .alheader {
+        font-size: 600%;
+        padding-top: 20%;
+        padding-left: 15%;
+    }
+}
+
+/*Tiny devices*/
+@media only screen and (max-width: 430px){
+    .alheader {
+        font-size: 400%;
+        padding-top: 30%;
+        padding-left: 17%;
+    }
 }

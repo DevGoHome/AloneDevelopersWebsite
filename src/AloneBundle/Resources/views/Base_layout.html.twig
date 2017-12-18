@@ -16,7 +16,7 @@
 
 </head>
 
-<body style="margin-top: 100px" {% block background %}class="backgroundImage"{% endblock %}>
+<body {% block background %}class="backgroundImage"{% endblock %}>
 
 <div id="Toolbar">
     {% block toolbar %}
@@ -33,6 +33,12 @@
                 <a href="{{ path('friends') }}" class="btn toolbar-links" >Friends</a>
             </div>
 </div>
+    {% endblock %}
+</div>
+
+<div id="header" class="row alheader">
+    {% block header %}
+        GoHome
     {% endblock %}
 </div>
 
