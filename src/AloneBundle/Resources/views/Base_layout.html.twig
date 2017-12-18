@@ -42,6 +42,11 @@
     </div>
 {% block javascript %}
 
+<div id="sitebar" class="col-lg-1 col-md-2 col-sm-3 text-left">
+    {% block sitebar %}
+    {% endblock %}
+</div>
+
 {% endblock %}
 <script
         src="https://code.jquery.com/jquery-3.1.1.min.js"
