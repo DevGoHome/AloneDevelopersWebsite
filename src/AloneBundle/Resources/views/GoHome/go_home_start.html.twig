@@ -4,39 +4,20 @@
 GoHome
 {% endblock %}
 
+{% block header %}
+    GoHome
+{% endblock %}
+
+{% block smallHeader %}
+    our horror game
+{% endblock %}
+
 {% block content %}
-    <table class="table-responsive" style="width:100%; padding: 1%">
-        <tr>
-            <th>
-                <h1 class="alheader">
-                    GoHome
-                </h1>
-            </th>
-            <th>
-                <h1 class="alheader-Right">
-                    Highlights
-                </h1>
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <div class="text-left" style="padding-left: 4vmax">
-                    <a href="{{ path('GoHome_devBlog') }}" class="btn btn-innerMenu">Dev Blog</a>
-                    <a href="{{ path('GoHome_About') }}" class="btn btn-innerMenu">About</a>
-                    <a href="{{ path('GoHome_Media') }}" class="btn btn-innerMenu">Media</a>
-                </div>
-            </td>
 
-            <td>
-                <div class="text-right" style="padding-right: 4vmax">
-                    <ul class="altext">
-                        <li><b>C++ Project "GoHome" created:</b> Mai of 2015</li>
-                        <li><b>UE4 Project "GoHome" created:</b> September 2015</li>
-                    </ul>
-                </div>
-            </td>
-        </tr>
-    </table>
-
-
+    <div style="padding: 5%">
+        <a href="{{ path('GoHome_devBlog') }}" class="btn btn-innerMenu">Dev Blog</a>
+        <a href="{{ path('gh_concept') }}" class="btn btn-innerMenu">Concept</a>
+        <a href="{{ path('GoHome_About') }}" class="btn btn-innerMenu">About</a>
+        <a href="{{ path('GoHome_Media') }}" class="btn btn-innerMenu">Gallery</a>
+    </div>
 {% endblock %}

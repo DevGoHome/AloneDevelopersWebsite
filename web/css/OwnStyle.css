@@ -291,7 +291,7 @@
     .alheader {
         font-size: 400%;
         padding-top: 30%;
-        padding-left: 27%;
+        padding-left: 5%;
     }
 
     .toolbar-links {
@@ -306,7 +306,7 @@
         font-weight:600;
         text-shadow: 0px 0px 0.2vmax rgb(0, 0, 0);
         color: rgb(27, 38, 54);
-        padding-left: 33%;
+        padding-left: 15%;
         margin-top: -2.5%;
     }
 
