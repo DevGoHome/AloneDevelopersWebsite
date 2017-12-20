@@ -141,26 +141,27 @@
     top: 0;
     left: 0;
     padding: 5px;
-    background: linear-gradient(rgba(0, 10, 38, 1), rgba(10, 24, 57, 1));
+    /*background-image: url("/../images/GHStars_preview.jpeg");*/
+    background: linear-gradient(rgba(0, 10, 38, 1), rgba(3, 16, 35, 1));
     text-align: center;
     z-index: 9999;
 }
 
 #sitebar {
     position: fixed;
-    width: 10%;
+    width: 20%;
     height: 100%;
     top: 15%;
     left: 0;
     padding: 5px;
-    background: linear-gradient(#0a1839, #000a26);
+    background: linear-gradient(rgb(3, 16, 38), rgb(0, 0, 0));
     text-align: center;
     z-index: 9999;
 }
 
 .toolbar-links {
     font-family: 'Indie Flower';
-    font-size: 5vh;
+    font-size: 300%;
     color: #7aa4a7;
 }
 
@@ -178,9 +179,16 @@
 }
 
 .backgroundImage {
-    background: url("/../images/GoHomeTeaser.png") no-repeat center fixed;
+    background: url("/../images/GoHomeTeaser.png") no-repeat center;
     background-size: 100vw 100vh;
     background-position: 0 12vh;
+}
+
+.logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10000;
 }
 
 .defaultBackground {
@@ -199,8 +207,18 @@
     font-weight:600;
     text-shadow: 0px 0px 0.2vmax rgb(0, 0, 0);
     color: rgb(27, 38, 54);
-    padding-left: 13%;
+    padding-left: 23%;
     padding-top: 8%;
+}
+
+.alSmallHeader{
+    font-family: 'Indie Flower';
+    font-size: 300%;
+    font-weight:600;
+    text-shadow: 0px 0px 0.2vmax rgb(0, 0, 0);
+    color: rgb(27, 38, 54);
+    padding-left: 33%;
+    margin-top: -2.5%;
 }
 
 .alheader-Right{
@@ -214,21 +232,57 @@
     float: right;
 }
 
-/*Medium devices*/
-@media only screen and (max-width: 960px){
-    .alheader {
-        font-size: 700%;
-        padding-top: 14%;
-        padding-left: 15%;
-    }
+#content{
+    padding-left: 21%;
 }
 
 /*Medium devices*/
+@media only screen and (max-width: 1000px){
+    .alheader {
+        font-size: 700%;
+        padding-top: 14%;
+        padding-left: 25%;
+    }
+
+    .toolbar-links {
+        font-family: 'Indie Flower';
+        font-size: 230%;
+        color: #7aa4a7;
+    }
+
+    .alSmallHeader{
+        font-family: 'Indie Flower';
+        font-size: 200%;
+        font-weight:600;
+        text-shadow: 0px 0px 0.2vmax rgb(0, 0, 0);
+        color: rgb(27, 38, 54);
+        padding-left: 33%;
+        margin-top: -2.5%;
+    }
+}
+
+/*Small devices*/
 @media only screen and (max-width: 600px){
     .alheader {
         font-size: 600%;
         padding-top: 20%;
-        padding-left: 15%;
+        padding-left: 25%;
+    }
+
+    .toolbar-links {
+        font-family: 'Indie Flower';
+        font-size: 200%;
+        color: #7aa4a7;
+    }
+
+    .alSmallHeader{
+        font-family: 'Indie Flower';
+        font-size: 150%;
+        font-weight:600;
+        text-shadow: 0px 0px 0.2vmax rgb(0, 0, 0);
+        color: rgb(27, 38, 54);
+        padding-left: 33%;
+        margin-top: -2.5%;
     }
 }
 
@@ -237,6 +291,38 @@
     .alheader {
         font-size: 400%;
         padding-top: 30%;
-        padding-left: 17%;
+        padding-left: 27%;
+    }
+
+    .toolbar-links {
+        font-family: 'Indie Flower';
+        font-size: 140%;
+        color: #7aa4a7;
+    }
+
+    .alSmallHeader{
+        font-family: 'Indie Flower';
+        font-size: 100%;
+        font-weight:600;
+        text-shadow: 0px 0px 0.2vmax rgb(0, 0, 0);
+        color: rgb(27, 38, 54);
+        padding-left: 33%;
+        margin-top: -2.5%;
+    }
+
+    #sitebar {
+        position: fixed;
+        width: 0%;
+        height: 0%;
+        top: 0%;
+        left: 0;
+        padding: 0px;
+        background: linear-gradient(#0a1839, #000a26);
+        text-align: center;
+        z-index: 9999;
+    }
+
+    #content{
+        padding-left: 5%;
     }
 }
