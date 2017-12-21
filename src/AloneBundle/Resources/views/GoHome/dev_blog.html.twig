@@ -4,22 +4,27 @@
 GoHome - Dev Blog
 {% endblock %}
 
-{% block content %}
-    <div class="row">
-        <h1 class="text-center alheader">
-                Dev Blog
-        </h1>
-    </div>
+{% block header %}
+    DevBlog
+{% endblock %}
 
+{% block smallHeader %}
+    <br>
+    Blog about GoHome
+{% endblock %}
+
+{% block content %}
 <div class="col-lg-offset-3">
 
     {% set i = blogs|length - 1 %}
 
     <ul>
     {% for blog in blogs %}
-        <a id="blog_{{ i }}" style="display: none; font-size: 250%" class="bloglink" href="{{ path('GoHome_show_devBlog', {'id': blogs[i].id}) }}">{{ blogs[i].title | raw }}</a>
-        <p></p>
-        {% set i = i - 1 %}
+        <div class="text-box">
+            <a id="blog_{{ i }}" style="display: none; font-size: 250%" class="bloglink" href="{{ path('GoHome_show_devBlog', {'id': blogs[i].id}) }}">{{ blogs[i].title | raw }}</a>
+            <p></p>
+            {% set i = i - 1 %}
+        </div>
     {% endfor %}
     </ul>
 </div>
@@ -34,14 +39,7 @@ GoHome - Dev Blog
         </button>
     </div>
 
-{% endblock %}
-
-{% block javascript %}
-
     <script>
-
-        {#Info: Je kleiner die "i", desto älter der Eintrag#}
-
         var entrys = [];
 
         for (var i = 0; i < {{ blogs | length }};i++){
@@ -97,6 +95,8 @@ GoHome - Dev Blog
         }
 
         fillSitesWithEntrys();
+
+
 
     </script>
 

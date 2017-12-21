@@ -23,8 +23,8 @@ admin:
     type:     annotation
     prefix:   /
 
-friends:
-    resource: "@AloneBundle/Controller/Friends_Controller.php"
+downloads:
+    resource: "@AloneBundle/Controller/Downloads_Controller.php"
     type:     annotation
     prefix:    /
 

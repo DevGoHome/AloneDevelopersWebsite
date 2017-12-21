@@ -7,7 +7,9 @@ use AloneBundle\Entity\DevBlog;
 use AloneBundle\Form\Comment_Form;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Intl\Tests\Data\Provider\Json\JsonRegionDataProviderTest;
 
 class GoHome_Controller extends Controller
 {
@@ -32,6 +34,25 @@ class GoHome_Controller extends Controller
         $blogs = $em->getRepository('AloneBundle:DevBlog')->findAll();
 
         return $this->render('@Alone/GoHome/dev_blog.html.twig', array('blogs' => $blogs));
+    }
+
+    /**
+     * @Route("GoHome/getBlogs", name="GoHome_pagedBlogs")
+     * @param $page
+     * @param $count
+     * @return JsonResponse
+     */
+    public function getPagedBlogs($page, $count){
+
+        $blogs = $this->getDoctrine()->getRepository('AloneBundle:DevBlog')->findAll();
+
+        $result = array();
+
+        foreach ($blogs as $blog) {
+            array_push($result, $blog);
+        }
+
+        return new JsonResponse(['data' => $result], 'success');
     }
 
     /**
