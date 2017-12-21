@@ -13,7 +13,7 @@
 .altext{
     font-family: 'Indie Flower';
     font-size: 2vmax;
-    color: #2e2e2e;
+    color: #141414;
 }
 
 .allink{
@@ -141,10 +141,11 @@
     top: 0;
     left: 0;
     padding: 5px;
+    box-shadow: 0px 4px 5px 0px #000000;
     /*background-image: url("/../images/GHStars_preview.jpeg");*/
     background: linear-gradient(rgba(0, 10, 38, 1), rgba(3, 16, 35, 1));
     text-align: center;
-    z-index: 9999;
+    z-index: 10000;
 }
 
 #sitebar {
@@ -152,10 +153,11 @@
     width: 20%;
     height: 100%;
     top: 15%;
-    left: 0;
+    float: left;
     padding: 5px;
+    -webkit-box-shadow: 10px 0 5px 0px #000000;
+    box-shadow: 10px 0 5px 0px #000000;
     background: linear-gradient(rgb(3, 16, 38), rgb(0, 0, 0));
-    text-align: center;
     z-index: 9999;
 }
 
@@ -166,16 +168,20 @@
 }
 
 .btn-alone {
+    position: absolute;
     background-color: #0a132d;
     border-radius: 5px;
     border: 2px solid #050c03;
     box-shadow: #000000 0 0 0.6vmax;
     color: #7aa4a7;
-    font-size: 1vmax;
-    padding: 0.8vmax;
+    top: 78%;
+    left: 5%;
+    font-size: 200%;
+    padding-left: 7%;
+    padding-right: 7%;
     text-decoration: none;
     text-shadow: #000000 5px 5px 10px;
-    transition: all 0.4s ease;
+    transition: all 0.1s ease;
 }
 
 .backgroundImage {
@@ -234,6 +240,22 @@
 
 #content{
     padding-left: 21%;
+}
+
+.text-box{
+    position: relative;
+    width: 70%;
+    height: inherit;
+    padding: 0.5%;
+    margin: 0.5%;
+    float: left;
+    overflow: auto;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(44, 44, 44);
+    border-radius: 8px;
+    box-shadow: #000000 0 0 0.6vmax;
+    background: linear-gradient(rgba(99, 99, 99, 0.9), rgba(62, 62, 62, 0.8));
 }
 
 /*Medium devices*/

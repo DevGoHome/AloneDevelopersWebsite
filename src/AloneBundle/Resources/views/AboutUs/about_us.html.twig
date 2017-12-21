@@ -4,10 +4,6 @@
  About us
 {% endblock %}
 
-{% block background %}
-    class="defaultBackground"
-{% endblock %}
-
 {% block header %}
     About us
 {% endblock %}
@@ -19,28 +15,33 @@
 {% block content %}
 
     <div class="altext" style="padding: 5%">
+        <div class="text-box">
+            <h1><b style="font-size: 150%">Who we are</b></h1>
             We are a small german indie game developer group called "AloneDevs" (or AloneDevelopers if you want)
-            We are three people:
+        </div>
 
-        <h1><b style="font-size: 150%">Thomas:</b></h1>
 
-                Hey guys,<br>
+        <div class="text-box">
+            <h1><b style="font-size: 150%">Thomas:</b></h1>
+            Hey guys,<br>
                 I'm the head of our developer studio.
                 I'm a big horror fetishist and therfore I'm creating the ideas and the story for the game. Moreover I'm the manager of
                 AloneDevs and I'm taking care of the promotion of GoHome, make a few designs and cut the trailer for our Game.
+        </div>
 
-        <h1><b style="font-size: 150%">Moax:</b></h1>
+        <div class="text-box">
+            <h1><b style="font-size: 150%">Moax:</b></h1>
+            Hey I am Moax.<br>
+            I am the musician of this Team.<br>
+            You can hear my first theme in the Game Teaser.<br>
+            I am not a professional musician this is more a hobby.<br>
+        </div>
 
-
-            <p>Hey I am Moax.</p>
-            <p>I am the musician of this Team.</p>
-            <p>You can hear my first theme in the Game Teaser.</p>
-            <p>I am not a professional musician this is more a hobby.</p>
-        <p></p>
-        <h1><b style="font-size: 150%">_dev:</b></h1>
-
-            Basically I do all the other things.<p></p> The models, the textures and materials, the (game) world, the AI
+        <div class="text-box">
+            <h1><b style="font-size: 150%">_dev:</b></h1>
+            Basically I do all the other things.<br>The models, the textures and materials, the (game) world, the AI
             and all the other beautiful things that you can imagine.
-            <p></p>I also write this website.
+                <br>I also write this website.
+            </div>
     </div>
 {% endblock %}

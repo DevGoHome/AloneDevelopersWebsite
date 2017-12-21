@@ -16,7 +16,7 @@
 
 </head>
 
-<body {% block background %}class="backgroundImage"{% endblock %}>
+<body {% block background %}class="backgroundImage"{% endblock %} style="background-attachment: fixed; overflow-x: hidden;">
 
 <div id="Toolbar">
     {% block toolbar %}
@@ -30,7 +30,7 @@
 
                 <a href="{{ path('contact') }}" class="btn toolbar-links">Contact</a>
 
-                <a href="{{ path('friends') }}" class="btn toolbar-links" >Friends</a>
+                <a href="{{ path('friends') }}" class="btn toolbar-links" >Downloads</a>
             </div>
 </div>
     {% endblock %}
@@ -62,6 +62,8 @@
 
 <div id="sitebar" class="col-lg-1 col-md-2 col-sm-3 text-left">
     {% block sitebar %}
+
+        {% include 'AloneBundle::sitebar.html.twig' %}
     {% endblock %}
 </div>
 
