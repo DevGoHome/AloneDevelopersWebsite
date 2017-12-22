@@ -14,20 +14,12 @@ GoHome - Dev Blog
 {% endblock %}
 
 {% block content %}
-<div class="col-lg-offset-3">
+{#<div class="col-lg-offset-3">#}
 
-    {% set i = blogs|length - 1 %}
+    {#{% set i = blogs|length - 1 %}#}
 
-    <ul>
-    {% for blog in blogs %}
-        <div class="text-box">
-            <a id="blog_{{ i }}" style="display: none; font-size: 250%" class="bloglink" href="{{ path('GoHome_show_devBlog', {'id': blogs[i].id}) }}">{{ blogs[i].title | raw }}</a>
-            <p></p>
-            {% set i = i - 1 %}
-        </div>
-    {% endfor %}
-    </ul>
-</div>
+    <div id="devblogs_div">
+    </div>
 
     <div style="display: inline-block; margin-left: 40%;">
         <button style="display: none" id="next_button" class="btn btn-alone" onclick="nextSite()">
@@ -39,64 +31,35 @@ GoHome - Dev Blog
         </button>
     </div>
 
+
+
     <script>
-        var entrys = [];
 
-        for (var i = 0; i < {{ blogs | length }};i++){
-            entrys.push(document.getElementById("blog_"+i));
-        }
+        var blogs = [];
 
-        var prev = document.getElementById("prev_button");
-        var next = document.getElementById("next_button");
+        function getBlogs() {
+            $.ajax({
+                type: 'GET',
+                url: "{{ path('GoHome_pagedBlogs', {'page': 0, 'count': 5}) }}",
+                success: function(response){
+                    blogs = JSON.parse(response);
 
-        var start = 1;
-        var end   = 5;
-
-        function showButtons() {
-            if(start >= 6){
-                next.style.display = "inline-block";
-            } else {
-                next.style.display = "none";
-            }
-
-            if(end <= entrys.length){
-                prev.style.display = "inline-block";
-            } else {
-                prev.style.display = "none";
-            }
-        }
-
-        function previous() {
-            start = start + 5;
-            end = end + 5;
-            fillSitesWithEntrys();
-        }
-
-        function nextSite() {
-            start = start - 5;
-            end = end - 5;
-            fillSitesWithEntrys();
-        }
-
-
-        function fillSitesWithEntrys() {
-
-            for (var c = 0; c < entrys.length; c++) {
-                entrys[c].style.display = "none";
-            }
-
-            for (var i = entrys.length - start; i >= entrys.length - end; i--) {
-                if (entrys[i] != null) {
-                    entrys[i].style.display = "inline";
-                    entrys[i].style.color = "#b7b7b7";
+                    reloadblogs();
                 }
-            }
-            showButtons();
+            });
         }
 
-        fillSitesWithEntrys();
+        function reloadblogs() {
+            blogs.forEach(function (item, index) {
+                console.log(item);
+                $("#devblogs_div").append("<div class=\"text-box\">" +
+                        "<a class='altext' style='font-size: 250%' href='dev_blog/"+item.id+"'>"+item.title+"</a>" +
+                        "" +
+                        "</div>");
+            })
+        }
 
-
+        getBlogs();
 
     </script>
 

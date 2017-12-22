@@ -45,7 +45,7 @@ class GoHome_Controller extends Controller
      * @Route("GoHome/getBlogs/{page}/{count}", name="GoHome_pagedBlogs")
      * @param $page
      * @param $count
-     * @return JsonResponse
+     * @return Response
      */
     public function getPagedBlogs($page, $count){
 
