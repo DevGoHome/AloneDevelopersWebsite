@@ -9,8 +9,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Intl\Tests\Data\Provider\Json\JsonRegionDataProviderTest;
 
+/**
+ * Class GoHome_Controller
+ * @package AloneBundle\Controller
+ */
 class GoHome_Controller extends Controller
 {
 
@@ -37,7 +42,7 @@ class GoHome_Controller extends Controller
     }
 
     /**
-     * @Route("GoHome/getBlogs", name="GoHome_pagedBlogs")
+     * @Route("GoHome/getBlogs/{page}/{count}", name="GoHome_pagedBlogs")
      * @param $page
      * @param $count
      * @return JsonResponse
@@ -48,11 +53,14 @@ class GoHome_Controller extends Controller
 
         $result = array();
 
-        foreach ($blogs as $blog) {
-            array_push($result, $blog);
+        for($i = $page; $i < $page+$count; $i++){
+            array_push($result, $blogs[$i]);
         }
 
-        return new JsonResponse(['data' => $result], 'success');
+        $serializer = $this->container->get('jms_serializer');
+        $pagedBlogs = $serializer->serialize($result, 'json');
+
+        return new Response($pagedBlogs);
     }
 
     /**
