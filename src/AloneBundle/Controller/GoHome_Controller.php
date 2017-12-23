@@ -42,7 +42,7 @@ class GoHome_Controller extends Controller
     }
 
     /**
-     * @Route("GoHome/getBlogs/{page}/{count}", name="GoHome_pagedBlogs")
+     * @Route("GoHome/getBlogs/{page}/{count}",options={"expose"=true}, name="GoHome_pagedBlogs")
      * @param $page
      * @param $count
      * @return Response
@@ -53,12 +53,13 @@ class GoHome_Controller extends Controller
 
         $result = array();
 
+        //Todo Pager einbauen
         for($i = $page; $i < $page+$count; $i++){
             array_push($result, $blogs[$i]);
         }
 
         $serializer = $this->container->get('jms_serializer');
-        $pagedBlogs = $serializer->serialize($result, 'json');
+        $pagedBlogs = $serializer->serialize($blogs, 'json');
 
         return new Response($pagedBlogs);
     }
@@ -96,8 +97,10 @@ class GoHome_Controller extends Controller
         return $this->render(
             '@Alone/GoHome/show_dev_blog.html.twig',
             array(
-                  'blog' => $blog, 'prev' => $prev, 'next' => $next,
-                  'form' => $form->createView(), 'comments' => $comments,
+                'blog' => $blog, 'prev' => $prev,
+                'next' => $next,
+                'form' => $form->createView(),
+                'comments' => $comments,
             ));
     }
 

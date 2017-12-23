@@ -4,65 +4,58 @@
 GoHome - Dev Blog
 {% endblock %}
 
-{% block background %}
-    class="defaultBackground"
+{% block header %}
+    DevBlog {{ blog.id }}
+{% endblock %}
+
+{% block smallHeader %}
+    <br>
+    {{ blog.title }}
 {% endblock %}
 
 {% block content %}
 
-        <h1 class="text-center altext" style="font-size: 4.5vmax">
-            <b>
-                {{ blog.title }}
-            </b>
-        </h1>
-
-    <div class="row altext" style="padding-left: 11vw; padding-right: 11vw; font-size: 180%">
+    <div class="altext text-box" style="left: 10%; overflow: hidden">
             {{ blog.body | raw }}
-    </div>
 
-    <div class="row">
-        <p class="text-center altext">
-            <u>
-                {{ blog.sender }}
-            </u>
-        </p>
-    </div>
+
+    <p class="text-center altext">
+        <u>
+            {{ blog.sender }}
+        </u>
+    </p>
 
     <div class="row text-center altext">
         <h3>Created at:</h3>
         {{ blog.created }}
     </div>
 
-    <div class="altext" style="margin-left: 32%">
-    <h2>Comments:</h2>
-        {% for comment in comments %}
-            {% if comment.enabled == 1 %}
-            <h3 class="altext alheader">{{ comment.sender }}:</h3>
-            <p></p>
-            <h4 class="altext">{{ comment.content }}</h4>
-            <p></p>
-            -----------------------------------------------------------------
-            {% endif %}
-        {% endfor %}
     </div>
+        {% for comment in comments %}
+            <div class="text-box" style="left: 10%">
+            {% if comment.enabled == 1 %}
+                <h3 class="altext" style="font-weight: 900; font-size: 350%">{{ comment.sender }}:</h3>
+                <h4 class="altext" style="font-size: 250%; padding-left: 3%">{{ comment.content }}</h4>
+            {% endif %}
+            </div>
+        {% endfor %}
 
-    <div style="margin-left: 31.3%" class="row">
-            <div class="col-lg-7 col-md-6 col-sm-9 col-xs-8">
+    <div class="text-box" style="left: 10%">
+            <h3 class="altext" style="font-weight: 900; font-size: 350%">Add a Comment</h3>
+        <div style="padding-left: 3%">
             {{ form_start(form) }}
             {{ form_widget(form) }}
             {{ form_end(form) }}
-            </div>
         </div>
     </div>
-    <p class="row"></p>
 
-    <div class="row text-center">
-    {% if next %}
-    <a class="btn-alone btn" href="{{ path('GoHome_show_devBlog', {'id': next.id}) }}">Next Blog</a>
-    {% endif %}
-    <a class="btn-alone btn" href="{{ path('GoHome_devBlog') }}">Menu</a>
-    {% if prev %}
-    <a class="btn-alone btn" href="{{ path('GoHome_show_devBlog', {'id': prev.id}) }}">Previous Blog</a>
-    {% endif %}
+    {#<div class="text-center">#}
+    {#{% if next %}#}
+    {#<a class="btn-alone btn" href="{{ path('GoHome_show_devBlog', {'id': next.id}) }}">Next Blog</a>#}
+    {#{% endif %}#}
+    {#<a class="btn-alone btn" href="{{ path('GoHome_devBlog') }}">Menu</a>#}
+    {#{% if prev %}#}
+    {#<a class="btn-alone btn" href="{{ path('GoHome_show_devBlog', {'id': prev.id}) }}">Previous Blog</a>#}
+    {#{% endif %}#}
 
 {% endblock %}

@@ -14,42 +14,40 @@ GoHome - Dev Blog
 {% endblock %}
 
 {% block content %}
-{#<div class="col-lg-offset-3">#}
-
-    {#{% set i = blogs|length - 1 %}#}
 
     <div id="devblogs_div">
     </div>
 
+    {% set page = 0 %}
+
     <div style="display: inline-block; margin-left: 40%;">
-        <button style="display: none" id="next_button" class="btn btn-alone" onclick="nextSite()">
+        <button style="display: none" id="next_button" class="btn btn-alone" onclick="getBlogs(1, 5)">
             <span class="glyphicon glyphicon-arrow-left"> Forward</span>
         </button>
 
-        <button style="display: none" id="prev_button" class="btn btn-alone" onclick="previous()">
+        <button style="display: none" id="prev_button" class="btn btn-alone" onclick="getBlogs(0, 5)">
             Previous <span class="glyphicon glyphicon-arrow-right"></span>
         </button>
     </div>
-
-
 
     <script>
 
         var blogs = [];
 
-        function getBlogs() {
+        function getBlogs(page, count) {
             $.ajax({
                 type: 'GET',
-                url: "{{ path('GoHome_pagedBlogs', {'page': 0, 'count': 5}) }}",
+                {#url: "{{ path('GoHome_pagedBlogs', {'page': 0, 'count': 5}) }}",#}
+                url: Routing.generate('GoHome_pagedBlogs', {'page': page, 'count': count}),
                 success: function(response){
                     blogs = JSON.parse(response);
-
                     reloadblogs();
                 }
             });
         }
 
         function reloadblogs() {
+            blogs.reverse();
             blogs.forEach(function (item, index) {
                 console.log(item);
                 $("#devblogs_div").append("<div class=\"text-box\">" +
@@ -59,7 +57,7 @@ GoHome - Dev Blog
             })
         }
 
-        getBlogs();
+        getBlogs(0,5);
 
     </script>
 
