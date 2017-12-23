@@ -219,6 +219,7 @@
     color: rgb(27, 38, 54);
     padding-left: 23%;
     padding-top: 8%;
+    padding-right: 5%;
 }
 
 .alSmallHeader{
@@ -240,6 +241,7 @@
     text-align: right;
     padding: 3%;
     float: right;
+    padding-right: 5%;
 }
 
 #content{
@@ -252,6 +254,7 @@
     height: inherit;
     padding: 0.5%;
     margin: 0.5%;
+    margin-left: 5%;
     float: left;
     overflow: auto;
     border-style: solid;
@@ -284,6 +287,7 @@
         font-size: 700%;
         padding-top: 14%;
         padding-left: 25%;
+        padding-right: 5%;
     }
 
     .toolbar-links {
@@ -301,14 +305,32 @@
         padding-left: 33%;
         margin-top: -2.5%;
     }
+
+    .text-box{
+        position: relative;
+        width: 80%;
+        height: inherit;
+        padding: 0.5%;
+        margin: 0.5%;
+        margin-left: 5%;
+        float: left;
+        overflow: auto;
+        border-style: solid;
+        border-width: 4px;
+        border-color: rgb(44, 44, 44);
+        border-radius: 8px;
+        box-shadow: #000000 0 0 0.6vmax;
+        background: linear-gradient(rgba(99, 99, 99, 0.9), rgba(62, 62, 62, 0.8));
+    }
 }
 
 /*Small devices*/
 @media only screen and (max-width: 600px){
     .alheader {
-        font-size: 600%;
+        font-size: 500%;
         padding-top: 20%;
         padding-left: 25%;
+        padding-right: 5%;
     }
 
     .toolbar-links {
@@ -326,6 +348,23 @@
         padding-left: 33%;
         margin-top: -2.5%;
     }
+
+    .text-box{
+        position: relative;
+        width: 80%;
+        height: inherit;
+        padding: 0.5%;
+        margin: 0.5%;
+        margin-left: 5%;
+        float: left;
+        overflow: auto;
+        border-style: solid;
+        border-width: 4px;
+        border-color: rgb(44, 44, 44);
+        border-radius: 8px;
+        box-shadow: #000000 0 0 0.6vmax;
+        background: linear-gradient(rgba(99, 99, 99, 0.9), rgba(62, 62, 62, 0.8));
+    }
 }
 
 /*Tiny devices*/
@@ -334,6 +373,7 @@
         font-size: 400%;
         padding-top: 30%;
         padding-left: 5%;
+        padding-right: 5%;
     }
 
     .toolbar-links {
@@ -367,4 +407,27 @@
     #content{
         padding-left: 5%;
     }
+
+    .infotext{
+        font-family: 'Indie Flower';
+        font-size: 0%;
+        color: #141414;
+    }
+
+    .text-box{
+        position: relative;
+        width: 80%;
+        height: inherit;
+        padding: 0.5%;
+        margin: 0.5%;
+        float: left;
+        overflow: auto;
+        border-style: solid;
+        border-width: 4px;
+        border-color: rgb(44, 44, 44);
+        border-radius: 8px;
+        box-shadow: #000000 0 0 0.6vmax;
+        background: linear-gradient(rgba(99, 99, 99, 0.9), rgba(62, 62, 62, 0.8));
+    }
+
 }
