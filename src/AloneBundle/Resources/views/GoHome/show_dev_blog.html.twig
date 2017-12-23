@@ -28,6 +28,17 @@ GoHome - Dev Blog
     <div class="row text-center altext">
         <h3>Created at:</h3>
         {{ blog.created }}
+
+        <br>
+
+            {% if next %}
+                <a class="btn-innerMenu btn" style="font-size: 80%; padding: 1.3%" href="{{ path('GoHome_show_devBlog', {'id': next.id}) }}">Next Blog</a>
+            {% endif %}
+            <a class="btn-innerMenu btn" style="font-size: 80%; padding: 1.3%" href="{{ path('GoHome_devBlog') }}">Menu</a>
+            {% if prev %}
+                <a class="btn-innerMenu btn" style="font-size: 80%; padding: 1.3%" href="{{ path('GoHome_show_devBlog', {'id': prev.id}) }}">Previous Blog</a>
+            {% endif %}
+
     </div>
 
     </div>
@@ -48,14 +59,5 @@ GoHome - Dev Blog
             {{ form_end(form) }}
         </div>
     </div>
-
-    {#<div class="text-center">#}
-    {#{% if next %}#}
-    {#<a class="btn-alone btn" href="{{ path('GoHome_show_devBlog', {'id': next.id}) }}">Next Blog</a>#}
-    {#{% endif %}#}
-    {#<a class="btn-alone btn" href="{{ path('GoHome_devBlog') }}">Menu</a>#}
-    {#{% if prev %}#}
-    {#<a class="btn-alone btn" href="{{ path('GoHome_show_devBlog', {'id': prev.id}) }}">Previous Blog</a>#}
-    {#{% endif %}#}
 
 {% endblock %}
