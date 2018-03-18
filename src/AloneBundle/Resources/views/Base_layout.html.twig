@@ -16,7 +16,7 @@
 
 </head>
 
-<body {% block background %}class="backgroundImage"{% endblock %} style="background-attachment: fixed; overflow-x: hidden;">
+<body {% block background %}class="backgroundImage"{% endblock %} style="overflow-x: hidden;">
 
 <div id="Toolbar">
     {% block toolbar %}
@@ -70,7 +70,7 @@
     </div>
 {% block javascript %}
 
-<div id="sitebar" class="col-lg-1 col-md-2 col-sm-3 text-left">
+<div id="sitebar">
     {% block sitebar %}
 
         {% include 'AloneBundle::sitebar.html.twig' %}
