@@ -543,7 +543,7 @@
 
     .backgroundImage {
         background: url("/../images/BackgroundSmall.jpg");
-        background-size: 50%;
+        background-size: 100%;
     }
 
 }
