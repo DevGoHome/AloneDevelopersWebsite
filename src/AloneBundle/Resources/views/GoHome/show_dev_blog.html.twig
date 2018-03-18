@@ -15,7 +15,7 @@ GoHome - Dev Blog
 
 {% block content %}
 
-    <div class="altext text-box" style="left: 10%; overflow: hidden">
+    <div class="altext text-box" style="overflow: hidden">
             {{ blog.body | raw }}
 
 
@@ -31,6 +31,7 @@ GoHome - Dev Blog
 
         <br>
 
+        <div style="margin-left: 0.5em">
             {% if next %}
                 <a class="btn-innerMenu btn" style="font-size: 80%; padding: 1.3%" href="{{ path('GoHome_show_devBlog', {'id': next.id}) }}">Next Blog</a>
             {% endif %}
@@ -38,12 +39,12 @@ GoHome - Dev Blog
             {% if prev %}
                 <a class="btn-innerMenu btn" style="font-size: 80%; padding: 1.3%" href="{{ path('GoHome_show_devBlog', {'id': prev.id}) }}">Previous Blog</a>
             {% endif %}
-
+        </div>
     </div>
 
     </div>
         {% for comment in comments %}
-            <div class="text-box" style="left: 10%">
+            <div class="text-box">
             {% if comment.enabled == 1 %}
                 <h3 class="altext" style="font-weight: 900; font-size: 350%">{{ comment.sender }}:</h3>
                 <h4 class="altext" style="font-size: 250%; padding-left: 3%">{{ comment.content }}</h4>
@@ -51,7 +52,7 @@ GoHome - Dev Blog
             </div>
         {% endfor %}
 
-    <div class="text-box" style="left: 10%">
+    <div class="text-box">
             <h3 class="altext" style="font-weight: 900; font-size: 350%">Add a Comment</h3>
         <div style="padding-left: 3%">
             {{ form_start(form) }}
